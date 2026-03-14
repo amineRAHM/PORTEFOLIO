@@ -1,9 +1,9 @@
 :root {
     --primary-color: #0070f3;
-    --bg-color: #0a0a0b;
-    --card-bg: #161618;
-    --border-color: #2d2d2d;
-    --text-light: #a1a1a1;
+    --bg-color: #0a0b10;
+    --card-bg: #111113;
+    --border-color: #232326;
+    --text-light: #a0a0a0;
     --text-white: #ffffff;
 }
 
@@ -14,8 +14,8 @@ body {
 }
 
 .navbar {
-    background: rgba(10, 10, 11, 0.7) !important;
-    background-color: rgba(10, 10, 11, 0.7) !important;
+    background: rgba(10, 11, 16, 0.7) !important;
+    background-color: rgba(10, 11, 16, 0.7) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
@@ -32,21 +32,18 @@ body {
     background-color: var(--card-bg);
     border: 1px solid var(--border-color) !important;
     box-shadow: none !important;
-    border: 1px solid var(--border-color);
-    box-shadow: none;
 }
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: none !important;
-    box-shadow: 0 5px 15px rgba(0, 112, 243, 0.15);
 }
 
 h1, h2, h3, h4, h5, h6, .card-title {
     color: var(--text-white) !important;
 }
 
-.text-muted, .card-text {
+p, .text-muted, .card-text {
     color: var(--text-light) !important;
 }
 
