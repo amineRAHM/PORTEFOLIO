@@ -14,8 +14,8 @@ body {
 }
 
 .navbar {
-    background: rgba(10, 11, 16, 0.7) !important;
-    background-color: rgba(10, 11, 16, 0.7) !important;
+    background: rgba(21, 32, 88, 0.7) !important;
+    background-color: rgba(24, 37, 100, 0.7) !important;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
