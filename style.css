@@ -66,3 +66,15 @@ footer {
     background-color: var(--bg-color) !important;
     border-top: 1px solid var(--border-color);
 }
+
+.student-badge {
+    display: inline-block;
+    padding: 0.4em 1em;
+    font-size: 0.85em;
+    font-weight: 500;
+    color: var(--primary-color);
+    background-color: rgba(0, 112, 243, 0.1);
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    margin-top: 8px;
+}
