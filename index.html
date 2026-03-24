@@ -113,6 +113,16 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#modalIA" style="cursor: pointer;">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="fas fa-brain text-info me-2"></i>IA Souveraine & Local LLM</h5>
+                        <p class="card-text small text-muted">Mise en place d'une infrastructure d'IA générative privée et sécurisée en local.</p>
+                        <span class="badge bg-secondary">IA</span>
+                        <span class="badge bg-secondary">Souveraineté</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -155,6 +165,29 @@
                     <ul class="list-unstyled mb-0">
                         <li><i class="fas fa-shield-alt text-success me-2"></i><strong>Stormshield Network Security (SNS)</strong></li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalIA" tabindex="-1" aria-labelledby="modalIALabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content text-white" style="background-color: #0a0b10; border-radius: 20px; overflow: hidden;">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-primary" id="modalIALabel"><i class="fas fa-brain text-info me-2"></i>IA Souveraine & Local LLM</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Objectif :</strong> Déployer une alternative locale à ChatGPT pour garantir la confidentialité totale des données de l'entreprise.</p>
+                    <p><strong>Infrastructure :</strong> Utilisation d'OpenClaw pour l'interface utilisateur et de Clawdbot pour l'orchestration des modèles.</p>
+                    <p><strong>Mise en œuvre :</strong> Déploiement via Docker de conteneurs isolés et intégration du moteur Ollama pour faire tourner des modèles de langage (LLM) directement sur les ressources du serveur.</p>
+                    <p><strong>Résultat :</strong> Un assistant IA performant, accessible en réseau local, sans aucune fuite de données vers l'extérieur.</p>
+                    <div class="mt-4 border-top border-secondary pt-3">
+                        <span class="badge bg-primary me-1">OpenClaw</span>
+                        <span class="badge bg-primary me-1">Clawdbot</span>
+                        <span class="badge bg-primary me-1"><i class="fab fa-docker me-1"></i>Docker</span>
+                        <span class="badge bg-primary">Ollama</span>
+                    </div>
                 </div>
             </div>
         </div>
