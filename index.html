@@ -40,29 +40,29 @@
         <h2 class="text-center mb-5">Réalisations Professionnelles</h2>
         <div class="row g-4">
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
+                <div class="card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#modalVeeam" style="cursor: pointer;">
                     <div class="card-body">
-                        <h5 class="card-title text-primary">Sauvegarde Immuable</h5>
-                        <p class="card-text small text-muted">Mise en place d'un Hardened Repository avec Veeam et Debian 12 pour contrer les ransomwares.</p>
+                        <h5 class="card-title text-primary">Projet Sauvegarde Veeam</h5>
+                        <p class="card-text small text-muted">Architecture 3-2-1 & Immuabilité</p>
                         <span class="badge bg-secondary">SISR</span>
                     </div>
                 </div>
             </div>
             <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
+                <div class="card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#modalDevOps" style="cursor: pointer;">
                     <div class="card-body">
-                        <h5 class="card-title text-primary">Optimisation Serveur HPE</h5>
-                        <p class="card-text small text-muted">Administration et maintenance serveur avec passage sur SSD NVMe en RAID 1.</p>
-                        <span class="badge bg-secondary">SISR</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">Automatisation n8n</h5>
-                        <p class="card-text small text-muted">Création de workflows d'automatisation et gestion de conteneurs Docker.</p>
+                        <h5 class="card-title text-primary">Projet Automatisation DevOps</h5>
+                        <p class="card-text small text-muted">Déploiement Dolibarr via Bot Telegram</p>
                         <span class="badge bg-secondary">DevOps</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#modalHPE" style="cursor: pointer;">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Projet Optimisation HPE ProLiant</h5>
+                        <p class="card-text small text-muted">Upgrade Storage & RAID Matériel</p>
+                        <span class="badge bg-secondary">SISR</span>
                     </div>
                 </div>
             </div>
@@ -105,5 +105,50 @@
     <footer class="bg-dark text-white text-center py-4">
         <p>Portfolio BTS SIO 2026 - RAHMANI Amine</p>
     </footer>
+
+    <!-- Modals -->
+    <div class="modal fade" id="modalVeeam" tabindex="-1" aria-labelledby="modalVeeamLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content text-white" style="background-color: #0a0b10; border-radius: 20px; overflow: hidden;">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-primary" id="modalVeeamLabel">Projet Sauvegarde Veeam</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Architecture 3-2-1 & Immuabilité :</strong> Mise en place d'une infrastructure de sauvegarde robuste comprenant 4 VMs. Un serveur Windows Server 2022 avec Veeam B&R, une VM Windows 11 (source), une Debian 12 configurée avec un disque monté en tant que Hardened Repository (stockage immuable contre les ransomwares), et un NAS externe pour la copie secondaire des données.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalDevOps" tabindex="-1" aria-labelledby="modalDevOpsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content text-white" style="background-color: #0a0b10; border-radius: 20px; overflow: hidden;">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-primary" id="modalDevOpsLabel">Projet Automatisation DevOps</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Déploiement Dolibarr via Bot Telegram :</strong> Création d'un workflow d'automatisation complet. n8n agit comme orchestrateur (cerveau) recevant des commandes via un Bot Telegram. Il pilote ensuite Docker pour instancier des conteneurs isolés (Apache/PHP/MariaDB). Cette solution permet de déployer une instance ERP/CRM sécurisée en moins de 10 secondes, éliminant tout risque d'erreur humaine manuelle.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalHPE" tabindex="-1" aria-labelledby="modalHPELabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content text-white" style="background-color: #0a0b10; border-radius: 20px; overflow: hidden;">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title text-primary" id="modalHPELabel">Projet Optimisation HPE ProLiant</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Upgrade Storage & RAID Matériel :</strong> Résolution de lenteurs critiques sur un serveur HPE ProLiant DL360 Gen10. Remplacement des HDD SATA par deux SSD Samsung 990 Pro NVMe installés sur une carte adaptatrice PCIe StarTech. Configuration du RAID 1 (Miroir) pour la haute disponibilité et activation de la Bifurcation PCIe (x4x4) dans le BIOS (F9) pour la reconnaissance des deux supports.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
