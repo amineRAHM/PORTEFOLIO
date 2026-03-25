@@ -200,7 +200,15 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p><strong>Architecture 3-2-1 & Immuabilité :</strong> Mise en place d'une infrastructure de sauvegarde robuste comprenant 4 VMs. Un serveur Windows Server 2022 avec Veeam B&R, une VM Windows 11 (source), une Debian 12 configurée avec un disque monté en tant que Hardened Repository (stockage immuable contre les ransomwares), et un NAS externe pour la copie secondaire des données.</p>
+                    <p><strong>Objectif :</strong> Garantir la continuité d'activité et la protection des données contre les ransomwares grâce à une solution de sauvegarde et réplication.</p>
+                    <p><strong>Infrastructure :</strong> Environnement virtualisé avec 4 VMs (Windows Server 2022, Windows 11, Debian 12) et un NAS physique.</p>
+                    <p><strong>Mise en œuvre :</strong> Déploiement de Veeam B&R. Configuration d'un 'Hardened Repository' sur Debian 12 avec immuabilité des données. Mise en place de copies de sauvegarde automatiques vers le NAS.</p>
+                    <p><strong>Résultat :</strong> Une solution de sauvegarde inviolable, testée et conforme aux standards de sécurité actuels.</p>
+                    <div class="mt-4 border-top border-secondary pt-3">
+                        <span class="badge bg-secondary me-1">Veeam</span>
+                        <span class="badge bg-secondary me-1">Debian</span>
+                        <span class="badge bg-secondary">Immuabilité</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -214,7 +222,16 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p><strong>Déploiement Dolibarr via Bot Telegram :</strong> Création d'un workflow d'automatisation complet. n8n agit comme orchestrateur (cerveau) recevant des commandes via un Bot Telegram. Il pilote ensuite Docker pour instancier des conteneurs isolés (Apache/PHP/MariaDB). Cette solution permet de déployer une instance ERP/CRM sécurisée en moins de 10 secondes, éliminant tout risque d'erreur humaine manuelle.</p>
+                    <p><strong>Objectif :</strong> Industrialiser et accélérer le déploiement d'instances Dolibarr pour supprimer les tâches manuelles.</p>
+                    <p><strong>Infrastructure :</strong> Serveur Linux Debian, Docker Engine, orchestrateur n8n, API Bot Telegram.</p>
+                    <p><strong>Mise en œuvre :</strong> Création d'un workflow n8n déclenché par Telegram. n8n pilote ensuite Docker pour l'instanciation automatique de conteneurs isolés (Apache/PHP/MariaDB).</p>
+                    <p><strong>Résultat :</strong> Déploiement d'un environnement client complet en moins de 10 secondes via une simple commande mobile.</p>
+                    <div class="mt-4 border-top border-secondary pt-3">
+                        <span class="badge bg-secondary me-1">n8n</span>
+                        <span class="badge bg-secondary me-1">Docker</span>
+                        <span class="badge bg-secondary me-1">Telegram API</span>
+                        <span class="badge bg-secondary">Automatisation</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -228,7 +245,16 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p><strong>Upgrade Storage & RAID Matériel :</strong> Résolution de lenteurs critiques sur un serveur HPE ProLiant DL360 Gen10. Remplacement des HDD SATA par deux SSD Samsung 990 Pro NVMe installés sur une carte adaptatrice PCIe StarTech. Configuration du RAID 1 (Miroir) pour la haute disponibilité et activation de la Bifurcation PCIe (x4x4) dans le BIOS (F9) pour la reconnaissance des deux supports.</p>
+                    <p><strong>Objectif :</strong> Répondre aux besoins du client qui se plaint de lenteurs sur son serveur.</p>
+                    <p><strong>Infrastructure :</strong> Serveur HPE ProLiant DL360 Gen10, SSD Samsung 990 Pro NVMe, carte adaptatrice PCIe StarTech.</p>
+                    <p><strong>Mise en œuvre :</strong> Installation physique de deux SSD NVMe à l'aide d'une carte adaptatrice en remplacement des HDD SATA. Configuration du RAID 1 (Miroir) via le contrôleur. Paramétrage de la 'Bifurcation PCIe x4x4' dans le BIOS HPE (F9).</p>
+                    <p><strong>Résultat :</strong> Latences disparues et sécurisation des données système par redondance matérielle.</p>
+                    <div class="mt-4 border-top border-secondary pt-3">
+                        <span class="badge bg-secondary me-1">HPE ProLiant</span>
+                        <span class="badge bg-secondary me-1">NVMe</span>
+                        <span class="badge bg-secondary me-1">RAID 1</span>
+                        <span class="badge bg-secondary">BIOS/UEFI</span>
+                    </div>
                 </div>
             </div>
         </div>
