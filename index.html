@@ -93,34 +93,66 @@
     </section>
 
     <section id="veille" class="container py-5">
-        <h2 class="text-center mb-5">Veille Technologique : Cybersécurité</h2>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">L'évolution des Ransomwares</h5>
-                        <p class="card-text small text-muted">Analyse des nouvelles techniques de double extorsion et des parades comme la sauvegarde immuable (Hardened Repository).</p>
-                        <span class="badge bg-danger">Ransomware</span>
+        <div class="text-center mb-5">
+            <h2>Veille Technologique & Cybersécurité</h2>
+            <p class="lead text-muted">Ma veille technologique est le moteur de mon apprentissage et nourrit directement mes choix techniques en entreprise.</p>
+        </div>
+
+        <div class="mb-5">
+            <h4 class="text-primary mb-4"><i class="fas fa-tools me-2"></i>Mes Outils de Capture</h4>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-white" style="background-color: #0a0b10; border-radius: 20px;">
+                        <div class="card-body p-4">
+                            <h5 class="card-title"><i class="fas fa-bell text-warning me-2"></i>Google Alerts</h5>
+                            <p class="card-text text-light">Surveillance quotidienne des mots-clés : Veeam vulnerability, Docker security, HPE ProLiant firmware.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 shadow-sm border-0 text-white" style="background-color: #0a0b10; border-radius: 20px;">
+                        <div class="card-body p-4">
+                            <h5 class="card-title"><i class="fab fa-x-twitter text-light me-2"></i>X (Twitter)</h5>
+                            <p class="card-text text-light">Flux en temps réel des chercheurs en cybersécurité et des éditeurs (Veeam, Docker) pour une réactivité immédiate face aux failles 0-day.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">Architecture Zero Trust</h5>
-                        <p class="card-text small text-muted">Adoption du modèle "Ne jamais faire confiance, toujours vérifier" pour la sécurisation globale des infrastructures.</p>
-                        <span class="badge bg-warning text-dark">Zero Trust</span>
+        </div>
+
+        <div>
+            <h4 class="text-primary mb-4"><i class="fas fa-newspaper me-2"></i>Articles Majeurs & Impacts</h4>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0 text-white" style="background-color: #0a0b10; border-radius: 20px;">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h5 class="card-title text-primary">Alerte Sécurité Veeam (CVE-2024-40711)</h5>
+                            <div class="mb-3"><span class="badge bg-danger">Cyber</span></div>
+                            <p class="card-text text-light flex-grow-1">Analyse d'une faille critique permettant l'exécution de code à distance. Cet article a validé ma décision de déployer un Hardened Repository sur Debian 12 pour garantir l'immuabilité des sauvegardes.</p>
+                            <a href="https://www.veeam.com/kb4649" target="_blank" class="btn btn-outline-primary mt-3 mt-auto rounded-pill">Lire l'article</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0 text-white" style="background-color: #0a0b10; border-radius: 20px;">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h5 class="card-title text-primary">Souveraineté de l'IA & Confidentialité</h5>
+                            <div class="mb-3"><span class="badge bg-info text-dark">IA</span></div>
+                            <p class="card-text text-light flex-grow-1">Étude sur les risques d'exfiltration de données via les IA Cloud. Cette veille m'a poussé à mettre en place une solution IA Local (OpenClaw/Ollama) pour garantir une confidentialité totale.</p>
+                            <a href="https://www.google.com/search?q=https://www.lemagit.fr/conseil/IA-generative-et-cybersecurite-les-risques-a-anticiper" target="_blank" class="btn btn-outline-primary mt-3 mt-auto rounded-pill">Lire l'article</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0 text-white" style="background-color: #0a0b10; border-radius: 20px;">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <h5 class="card-title text-primary">Performance Stockage NVMe vs SATA</h5>
+                            <div class="mb-3"><span class="badge bg-warning text-dark">Hardware</span></div>
+                            <p class="card-text text-light flex-grow-1">Comparatif technique sur la réduction des latences I/O en environnement virtualisé. Article utilisé pour conseiller au client l'upgrade du serveur HPE ProLiant via carte adaptatrice PCIe.</p>
+                            <a href="https://www.google.com/search?q=https://www.itpro.fr/le-nvme-standard-du-stockage-en-entreprise/" target="_blank" class="btn btn-outline-primary mt-3 mt-auto rounded-pill">Lire l'article</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary">L'IA dans la Cybersécurité</h5>
-                        <p class="card-text small text-muted">Utilisation de l'intelligence artificielle et du Machine Learning pour la détection proactive et l'analyse comportementale.</p>
-                        <span class="badge bg-info text-dark">IA & Cyber</span>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
