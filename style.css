@@ -1,6 +1,22 @@
 body {
     background-color: #000000 !important;
-    background-image: radial-gradient(circle at top right, #0d1b2a 0%, #050a10 50%, #000000 100%) !important;
-    background-attachment: fixed !important;
+    background: radial-gradient(circle at top right, #050a10 0%, #000000 70%, #000000 100%) fixed !important;
     color: #f8f9fa; /* S'assure que le texte par défaut soit clair */
+}
+
+.hero h1 {
+    font-weight: 800;
+}
+
+/* Unified Card Style for the entire portfolio */
+.card {
+    background-color: #121212 !important;
+    border: 1px solid #1f2a3c !important;
+    border-radius: 20px !important; /* Unified border-radius */
+}
+
+.modal-content {
+    background-color: #121212 !important;
+    border: 1px solid #1f2a3c !important;
+    border-radius: 20px !important;
 }
