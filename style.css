@@ -12,19 +12,19 @@ body {
 .hero h1 {
     font-weight: 700 !important; /* Titre moins épais (Bold au lieu de Black) */
     font-size: 4.5rem; /* Augmentation de la taille du titre */
-    color: #a8b2d1 !important; /* Gris ardoise plus doux et moins blanc */
+    color: #ccd6f6 !important; /* Gris ardoise clair, plus lisible */
 }
 
 .student-badge {
     font-weight: 500 !important; /* Épaisseur moyenne propre */
     font-size: 1.25rem;
-    color: #8892b0 !important; /* Gris bleuté plus sombre pour harmoniser */
+    color: #a8b2d1 !important; /* Gris bleuté légèrement plus clair */
 }
 
 .hero .lead {
     font-weight: 400 !important; /* Épaisseur normale, beaucoup plus propre à lire */
     font-size: 1.25rem !important;
-    color: #8892b0 !important; /* Gris bleuté plus sombre pour ne pas éblouir */
+    color: #a8b2d1 !important; /* Gris bleuté légèrement plus clair */
 }
 
 /* Unified Card Style for the entire portfolio */
