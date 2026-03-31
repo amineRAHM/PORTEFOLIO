@@ -21,6 +21,14 @@ body {
     border-radius: 20px !important; /* Unified border-radius */
     backdrop-filter: blur(10px) !important; /* Effet de flou en arrière-plan */
     -webkit-backdrop-filter: blur(10px) !important; /* Compatibilité Safari */
+    transition: all 0.3s ease-in-out !important; /* Animation fluide */
+    cursor: pointer !important; /* Curseur interactif */
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02) !important; /* Élévation et léger zoom */
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2) !important; /* Ombre bleutée (Cyan) */
+    border-color: #64ffda !important; /* Bordure brillante */
 }
 
 .modal-content {
