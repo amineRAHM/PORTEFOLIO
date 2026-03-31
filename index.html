@@ -47,6 +47,24 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#modalADDS" style="cursor: pointer;">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="fas fa-network-wired text-info me-2"></i>Déploiement AD DS & DHCP</h5>
+                        <p class="card-text small text-muted">Windows Server 2022</p>
+                        <span class="badge bg-secondary">SISR</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#modalPortfolio" style="cursor: pointer;">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="fas fa-user-edit text-info me-2"></i>Mon Portfolio</h5>
+                        <p class="card-text small text-muted">IA-Assisted & GitHub</p>
+                        <span class="badge bg-secondary">SISR</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -291,6 +309,53 @@
             </div>
         </div>
     </div>
+
+        <div class="modal fade" id="modalADDS" tabindex="-1" aria-labelledby="modalADDSLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content text-white" style="background-color: #0a0b10; border-radius: 20px; overflow: hidden;">
+                    <div class="modal-header border-secondary">
+                        <h5 class="modal-title text-primary" id="modalADDSLabel"><i class="fas fa-network-wired text-info me-2"></i>Déploiement AD DS & DHCP</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Objectif :</strong> Mettre en place un service d'annuaire centralisé pour gérer les identités, les accès et la sécurité du parc informatique.</p>
+                        <p><strong>Infrastructure :</strong> Environnement virtualisé sous Windows Server 2022 (Contrôleur de Domaine) et clients Windows 10/11 pour les tests de jonction.</p>
+                        <p><strong>Mise en œuvre :</strong> Installation du rôle AD DS, promotion du serveur en DC, configuration du DNS et du DHCP. Création d'une structure d’Unités d’Organisation (OU) et déploiement de GPO (politiques de mots de passe, restrictions de panneaux de configuration).</p>
+                        <p><strong>Résultat :</strong> Une gestion simplifiée et sécurisée des utilisateurs, permettant une administration centralisée conforme aux exigences d'une entreprise.</p>
+                        <div class="mt-4 border-top border-secondary pt-3">
+                            <span class="badge bg-secondary me-1">AD DS</span>
+                            <span class="badge bg-secondary me-1">Windows Server</span>
+                            <span class="badge bg-secondary me-1">GPO</span>
+                            <span class="badge bg-secondary me-1">DNS</span>
+                            <span class="badge bg-secondary">DHCP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modalPortfolio" tabindex="-1" aria-labelledby="modalPortfolioLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content text-white" style="background-color: #0a0b10; border-radius: 20px; overflow: hidden;">
+                    <div class="modal-header border-secondary">
+                        <h5 class="modal-title text-primary" id="modalPortfolioLabel"><i class="fas fa-user-edit text-info me-2"></i>Mon Portfolio</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>Objectif :</strong> Développer une plateforme vitrine moderne pour exposer mes compétences techniques de stage.</p>
+                        <p><strong>Infrastructure :</strong> Environnement de développement sous VS Code, hébergement via GitHub Pages.</p>
+                        <p><strong>Mise en œuvre :</strong> Utilisation de HTML5/CSS3 assistée par l'IA Gemini pour l'optimisation du code. Gestion de version avec Git pour conserver un historique complet des modifications.</p>
+                        <p><strong>Résultat :</strong> Un portfolio responsive et performant, démontrant ma maîtrise des outils DevOps et de l'IA.</p>
+                        <div class="mt-4 border-top border-secondary pt-3">
+                            <span class="badge bg-secondary me-1">HTML/CSS</span>
+                            <span class="badge bg-secondary me-1"><i class="fab fa-github me-1"></i>GitHub</span>
+                            <span class="badge bg-secondary me-1">Gemini AI</span>
+                            <span class="badge bg-secondary"><i class="fab fa-git-alt me-1"></i>Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
