@@ -12,13 +12,13 @@ body {
 .hero h1 {
     font-weight: 900 !important;
     font-size: 4.5rem; /* Augmentation de la taille du titre */
-    color: #e6f1ff !important; /* Gris Argenté Lumineux */
+    color: #ccd6f6 !important; /* Gris Ardoise Clair */
 }
 
 .hero .lead {
     font-weight: 900 !important; /* Résumé extra-épais */
     font-size: 1.25rem !important;
-    color: #e6f1ff !important; /* Gris Argenté Lumineux */
+    color: #ccd6f6 !important; /* Gris Ardoise Clair */
 }
 
 /* Unified Card Style for the entire portfolio */
@@ -46,6 +46,11 @@ body {
 
 .card:hover .card-text, .card:hover .text-muted {
     color: #e6f1ff !important; /* Éclaircissement dynamique au survol */
+}
+
+/* Forcer le texte des articles de veille en blanc pour un meilleur contraste */
+#veille .card .card-text {
+    color: #ffffff !important;
 }
 
 .modal-content {
