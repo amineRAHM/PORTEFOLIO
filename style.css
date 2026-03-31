@@ -1,22 +1,35 @@
 body {
     background-color: #000000 !important;
-    background: radial-gradient(circle at top right, #050a10 0%, #000000 70%, #000000 100%) fixed !important;
+    background: radial-gradient(circle at top right, #0a192f 0%, #020c1b 50%, #000000 100%) fixed !important;
     color: #f8f9fa; /* S'assure que le texte par défaut soit clair */
 }
 
 .hero h1 {
-    font-weight: 800;
+    font-weight: 900 !important;
+    font-size: 4.5rem; /* Augmentation de la taille du titre */
+}
+
+.hero .lead {
+    font-weight: 500;
+    font-size: 1.25rem !important; /* Augmentation de la taille du résumé */
 }
 
 /* Unified Card Style for the entire portfolio */
 .card {
-    background-color: #121212 !important;
-    border: 1px solid #1f2a3c !important;
+    background: rgba(10, 25, 47, 0.7) !important; /* Bleu sombre translucide */
+    border: 1px solid #64ffda40 !important; /* Bordure fine Bleu Cyan avec opacité */
     border-radius: 20px !important; /* Unified border-radius */
+    backdrop-filter: blur(10px) !important; /* Effet de flou en arrière-plan */
+    -webkit-backdrop-filter: blur(10px) !important; /* Compatibilité Safari */
 }
 
 .modal-content {
-    background-color: #121212 !important;
-    border: 1px solid #1f2a3c !important;
+    background-color: #0a192f !important; /* Fond bleu nuit pour les modals */
+    border: 1px solid #64ffda40 !important;
     border-radius: 20px !important;
+}
+
+/* Typographie et Lisibilité - Bleu Cyan pour faire ressortir le texte */
+h2, h4, .text-primary, .text-info {
+    color: #64ffda !important;
 }
