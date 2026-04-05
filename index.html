@@ -234,10 +234,16 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p><strong>Objectif :</strong> Déployer une alternative locale à ChatGPT pour garantir la confidentialité totale des données de l'entreprise.</p>
-                    <p><strong>Infrastructure :</strong> Utilisation d'OpenClaw pour l'interface utilisateur et de Clawdbot pour l'orchestration des modèles.</p>
-                    <p><strong>Mise en œuvre :</strong> Déploiement via Docker de conteneurs isolés et intégration du moteur Ollama pour faire tourner des modèles de langage (LLM) directement sur les ressources du serveur.</p>
-                    <p><strong>Résultat :</strong> Un assistant IA performant, accessible en réseau local, sans aucune fuite de données vers l'extérieur.</p>
+                    <p><strong>Contexte :</strong> L'entreprise souhaite utiliser l'IA pour gagner en efficacité, mais refuse catégoriquement que ses données confidentielles soient envoyées sur des serveurs externes (Cloud) pour des raisons de sécurité.</p>
+                    <p><strong>Objectif :</strong> Déployer un 'ChatGPT' privé et souverain capable non seulement de répondre aux questions, mais aussi d'exécuter des tâches concrètes en local.</p>
+                    <p><strong>Infrastructure :</strong> Serveur interne faisant tourner des modèles d'IA via Ollama. Utilisation de la couche applicative OpenClaw et de l'agent ClawDBot.</p>
+                    <p><strong>Mise en œuvre :</strong></p>
+                    <ul>
+                        <li>Installation d'une interface simple (OpenClaw) pour les employés.</li>
+                        <li>Intégration de ClawDBot, une IA 'agissante' qui s'appuie sur le modèle de notre choix (Gemini, DeepSeek, Claude, etc.) comme cerveau.</li>
+                        <li>Contrairement à une IA classique, ClawDBot peut réellement exécuter des actions : parcourir des fichiers locaux, analyser du contenu, ou même écrire et tester des lignes de commande de manière autonome.</li>
+                    </ul>
+                    <p><strong>Résultat :</strong> Un assistant intelligent, agissant et sécurisé, accessible uniquement au bureau. Il garantit la confidentialité totale des secrets de l'entreprise tout en automatisant des processus techniques réels.</p>
                     <div class="mt-4 border-top border-secondary pt-3">
                         <span class="badge bg-primary me-1">OpenClaw</span>
                         <span class="badge bg-primary me-1">Clawdbot</span>
@@ -257,10 +263,17 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p><strong>Objectif :</strong> Garantir la continuité d'activité et la protection des données contre les ransomwares grâce à une solution de sauvegarde et réplication.</p>
-                    <p><strong>Infrastructure :</strong> Environnement virtualisé avec 4 VMs (Windows Server 2022, Windows 11, Debian 12) et un NAS physique.</p>
-                    <p><strong>Mise en œuvre :</strong> Déploiement de Veeam B&R. Configuration d'un 'Hardened Repository' sur Debian 12 avec immuabilité des données. Mise en place de copies de sauvegarde automatiques vers le NAS.</p>
-                    <p><strong>Résultat :</strong> Une solution de sauvegarde inviolable, testée et conforme aux standards de sécurité actuels.</p>
+                    <p><strong>Contexte :</strong> Face à l'explosion des cyberattaques, les entreprises craignent de perdre leurs données même si elles ont des sauvegardes, car les pirates ciblent désormais les backups pour empêcher toute restauration.</p>
+                    <p><strong>Objectif :</strong> Protéger les données de l'entreprise contre les cyberattaques (ransomwares) en créant des sauvegardes qu'il est impossible d'effacer ou de modifier.</p>
+                    <p><strong>Infrastructure (Le rôle de mes 4 VMs) :</strong></p>
+                    <ul>
+                        <li><strong>Serveur Veeam (Windows Server) :</strong> C'est le 'cerveau' qui pilote et planifie toutes les sauvegardes.</li>
+                        <li><strong>PC Client (Windows 11) :</strong> C'est la machine de l'utilisateur que l'on veut protéger.</li>
+                        <li><strong>Serveur Debian 12 :</strong> C'est le coffre-fort principal. Il utilise une technologie spéciale (Immuabilité) qui verrouille les fichiers pour qu'un pirate ne puisse pas les supprimer.</li>
+                        <li><strong>NAS XPEnology :</strong> C'est la double sécurité. Il reçoit une copie des sauvegardes et les stocke dans une zone réseau séparée (DMZ).</li>
+                    </ul>
+                    <p><strong>Mise en œuvre :</strong> Installation et liaison des machines entre elles. Configuration du verrouillage des données sur Linux et mise en place d'une réplication automatique vers le NAS pour ne jamais perdre de données, même si le serveur principal brûle.</p>
+                    <p><strong>Résultat :</strong> Une protection totale. Même en cas d'attaque, on peut restaurer tout le système en quelques minutes.</p>
                     <img src="Documents/veeam.jpg" alt="Architecture de sauvegarde Veeam avec Hardened Repository" class="img-fluid rounded mt-4">
                     <div class="mt-4 border-top border-secondary pt-3">
                         <span class="badge bg-secondary me-1">Veeam</span>
@@ -280,10 +293,11 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p><strong>Objectif :</strong> Industrialiser et accélérer le déploiement d'instances Dolibarr pour supprimer les tâches manuelles.</p>
-                    <p><strong>Infrastructure :</strong> Serveur Linux Debian, Docker Engine, orchestrateur n8n, API Bot Telegram.</p>
-                    <p><strong>Mise en œuvre :</strong> Création d'un workflow n8n déclenché par Telegram. n8n pilote ensuite Docker pour l'instanciation automatique de conteneurs isolés (Apache/PHP/MariaDB).</p>
-                    <p><strong>Résultat :</strong> Déploiement d'un environnement client complet en moins de 10 secondes via une simple commande mobile.</p>
+                    <p><strong>Contexte :</strong> Le déploiement manuel de logiciels de gestion (ERP) est une tâche répétitive, lente et sujette aux erreurs humaines de configuration.</p>
+                    <p><strong>Objectif :</strong> Créer un système qui installe automatiquement des logiciels de gestion (Dolibarr) pour gagner du temps et éviter les erreurs.</p>
+                    <p><strong>Infrastructure :</strong> Un serveur Linux qui héberge 'n8n' (un chef d'orchestre qui automatise les tâches) et 'Docker' (qui prépare les logiciels dans des boîtes isolées).</p>
+                    <p><strong>Mise en œuvre :</strong> Création d'un scénario où il suffit d'envoyer un message sur Telegram pour que le serveur installe tout seul le logiciel, sa base de données et son accès web.</p>
+                    <p><strong>Résultat :</strong> Ce qui prenait 30 minutes à la main se fait maintenant en 10 secondes depuis un téléphone.</p>
                     <img src="Documents/n8n.png" alt="Capture d'écran du workflow n8n pour le déploiement de Dolibarr" class="img-fluid rounded mt-4">
                     <div class="mt-4 border-top border-secondary pt-3">
                         <span class="badge bg-secondary me-1">n8n</span>
@@ -304,10 +318,16 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p><strong>Objectif :</strong> Répondre aux besoins du client qui se plaint de lenteurs sur son serveur.</p>
-                    <p><strong>Infrastructure :</strong> Serveur HPE ProLiant DL360 Gen10, SSD Samsung 990 Pro NVMe, carte adaptatrice PCIe StarTech.</p>
-                    <p><strong>Mise en œuvre :</strong> Installation physique de deux SSD NVMe à l'aide d'une carte adaptatrice en remplacement des HDD SATA. Configuration du RAID 1 (Miroir) via le contrôleur. Paramétrage de la 'Bifurcation PCIe x4x4' dans le BIOS HPE (F9).</p>
-                    <p><strong>Résultat :</strong> Latences disparues et sécurisation des données système par redondance matérielle.</p>
+                    <p><strong>Contexte :</strong> Un client subissait des lenteurs critiques sur son serveur physique, impactant la productivité : les machines virtuelles mettaient un temps infini à démarrer.</p>
+                    <p><strong>Objectif :</strong> Booster un serveur physique lent pour qu'il redevienne rapide et fiable.</p>
+                    <p><strong>Infrastructure :</strong> Serveur professionnel HPE ProLiant DL360 Gen10, deux nouveaux disques ultra-rapides SSD Samsung 990 Pro NVMe et une carte adaptatrice PCIe StarTech. La carte est indispensable car le serveur ne dispose pas de slots NVMe natifs.</p>
+                    <p><strong>Mise en œuvre :</strong></p>
+                    <ul>
+                        <li><strong>Installation physique :</strong> Ouverture du serveur, montage des SSD NVMe sur la carte adaptatrice PCIe StarTech et insertion de l'ensemble dans un slot Riser libre.</li>
+                        <li><strong>Configuration BIOS :</strong> Réglage de la 'Bifurcation PCIe' (x4x4) dans l'UEFI HPE (F9) pour que le système divise les lignes PCIe et reconnaisse les deux disques séparément.</li>
+                        <li><strong>Sécurisation :</strong> Mise en place d'un système 'miroir' (RAID 1) : si un disque tombe en panne, le deuxième prend le relais sans coupure.</li>
+                    </ul>
+                    <p><strong>Résultat :</strong> Le serveur est devenu 10 fois plus rapide et les données sont mieux protégées contre les pannes matérielles.</p>
                     <div class="mt-4 border-top border-secondary pt-3">
                         <span class="badge bg-secondary me-1">HPE ProLiant</span>
                         <span class="badge bg-secondary me-1">NVMe</span>
@@ -327,10 +347,10 @@
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p><strong>Objectif :</strong> Mettre en place un service d'annuaire centralisé pour gérer les identités, les accès et la sécurité du parc informatique.</p>
-                        <p><strong>Infrastructure :</strong> Environnement virtualisé sous Windows Server 2022 (Contrôleur de Domaine) et clients Windows 10/11 pour les tests de jonction.</p>
-                        <p><strong>Mise en œuvre :</strong> Installation du rôle AD DS, promotion du serveur en DC, configuration du DNS et du DHCP. Création d'une structure d’Unités d’Organisation (OU) et déploiement de GPO (politiques de mots de passe, restrictions de panneaux de configuration).</p>
-                        <p><strong>Résultat :</strong> Une gestion simplifiée et sécurisée des utilisateurs, permettant une administration centralisée conforme aux exigences d'une entreprise.</p>
+                        <p><strong>Contexte :</strong> Sans gestion centralisée, chaque ordinateur doit être configuré un par un, ce qui rend la sécurité du parc informatique impossible à maintenir efficacement.</p>
+                        <p><strong>Objectif :</strong> Centraliser la gestion des ordinateurs et des employés pour que tout soit organisé et sécurisé.</p>
+                        <p><strong>Mise en œuvre :</strong> Création d'un annuaire qui gère les mots de passe de tout le monde. Mise en place de règles automatiques (GPO) : par exemple, obliger les fonds d'écran de l'entreprise ou interdire l'accès à certains dossiers sensibles.</p>
+                        <p><strong>Résultat :</strong> Une gestion simplifiée : quand un nouvel employé arrive, on lui crée un compte en 1 clic et il a accès à tout ce dont il a besoin.</p>
                         <div class="mt-4 border-top border-secondary pt-3">
                             <span class="badge bg-secondary me-1">AD DS</span>
                             <span class="badge bg-secondary me-1">Windows Server</span>
@@ -351,10 +371,10 @@
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p><strong>Objectif :</strong> Développer une plateforme vitrine moderne pour exposer mes compétences techniques de stage.</p>
-                        <p><strong>Infrastructure :</strong> Environnement de développement sous VS Code, hébergement via GitHub Pages.</p>
-                        <p><strong>Mise en œuvre :</strong> Utilisation de HTML5/CSS3 assistée par l'IA Gemini pour l'optimisation du code. Gestion de version avec Git pour conserver un historique complet des modifications.</p>
-                        <p><strong>Résultat :</strong> Un portfolio responsive et performant, démontrant ma maîtrise des outils DevOps et de l'IA.</p>
+                        <p><strong>Contexte :</strong> En recherche d'alternance pour ma Licence Pro à l'UPEC, je dois démontrer concrètement mes compétences aux recruteurs.</p>
+                        <p><strong>Objectif :</strong> Créer ce site web pour présenter mes projets de manière pro aux entreprises.</p>
+                        <p><strong>Mise en œuvre :</strong> Développement sous VS Code en utilisant les langages HTML/CSS. L'utilisation de Gemini Assist a énormément facilité la tâche, notamment pour l'optimisation et la correction du code. Le projet est hébergé sur GitHub, ce qui permet de conserver un historique complet des modifications et de revenir à une version ultérieure en cas de besoin.</p>
+                        <p><strong>Résultat :</strong> Une vitrine interactive qui prouve mes compétences techniques, ma maîtrise des outils de versioning et ma capacité à documenter mon travail.</p>
                         <div class="mt-4 border-top border-secondary pt-3">
                             <span class="badge bg-secondary me-1">HTML/CSS</span>
                             <span class="badge bg-secondary me-1"><i class="fab fa-github me-1"></i>GitHub</span>
