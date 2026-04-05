@@ -318,9 +318,13 @@
                     <p><strong>Contexte :</strong> Le déploiement manuel de logiciels de gestion (ERP) est une tâche répétitive, lente et sujette aux erreurs humaines de configuration.</p>
                     <p><strong>Objectif :</strong> Créer un système qui installe automatiquement des logiciels de gestion (Dolibarr) pour gagner du temps et éviter les erreurs.</p>
                     <p><strong>Infrastructure :</strong> Un serveur Linux qui héberge 'n8n' (un chef d'orchestre qui automatise les tâches) et 'Docker' (qui prépare les logiciels dans des boîtes isolées).</p>
-                    <p><strong>Mise en œuvre :</strong> Création d'un scénario où il suffit d'envoyer un message sur Telegram pour que le serveur installe tout seul le logiciel, sa base de données et son accès web.</p>
-                    <p><strong>Résultat :</strong> Ce qui prenait 30 minutes à la main se fait maintenant en 10 secondes depuis un téléphone.</p>
+                    <p><strong>Mise en œuvre :</strong> Création d'un scénario où il suffit d'envoyer un message sur Telegram pour que le serveur installe tout seul le logiciel, sa base de données et son accès web. Une fois l'installation terminée, le bot Telegram envoie automatiquement au client le lien URL direct vers son instance Dolibarr prête à l'emploi.</p>
+                    <p><strong>Résultat :</strong> Ce qui prenait 30 minutes à la main se fait maintenant en 10 secondes. Nous répondons ainsi à la demande du client beaucoup plus rapidement, le lien vers l'outil de gestion est envoyé directement sur notre téléphone via un lien sécurisé.</p>
                     <img src="Documents/n8n.png" alt="Capture d'écran du workflow n8n pour le déploiement de Dolibarr" class="img-fluid rounded mt-4">
+                    <div class="text-center mt-4">
+                        <img src="Documents/dolibarr.png" alt="Interface Dolibarr automatisée" class="img-fluid rounded border border-info" style="max-height: 400px;">
+                        <p class="text-muted small mt-2">Interface de l'ERP Dolibarr déployé automatiquement via n8n</p>
+                    </div>
                     <div class="mt-4 border-top border-secondary pt-3">
                         <span class="badge bg-secondary me-1">n8n</span>
                         <span class="badge bg-secondary me-1">Docker</span>
