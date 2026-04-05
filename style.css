@@ -29,6 +29,7 @@ body {
 
 /* Unified Card Style for the entire portfolio */
 .card {
+    height: 100% !important; /* S'assure que toutes les cartes ont une hauteur uniforme */
     background: rgba(10, 25, 47, 0.7) !important; /* Bleu sombre translucide */
     border: 1px solid #64ffda40 !important; /* Bordure fine Bleu Cyan avec opacité */
     border-radius: 20px !important; /* Unified border-radius */
